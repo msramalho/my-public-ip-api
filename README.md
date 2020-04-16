@@ -1,4 +1,6 @@
-# My Public IP API
+<h1 align="center">My Public IP API</h1>
+
+
 Use gh-pages as an API for the public IP (typically for dynamic IPs) of your home network, this repo is deployed without any real IP so what you'll see in [gh-pages](https://msramalho.github.io/my-public-ip-api/) is `{}`
 
 ### Instructions
