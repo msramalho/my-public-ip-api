@@ -1,6 +1,10 @@
 import requests, json, time, datetime, os
 
-ENDPOINT = "docs/index.json"  # accessible in ...github.io/my-public-ip-api
+def abs_path():
+    return os.path.dirname(os.path.realpath(__file__))
+
+
+ENDPOINT = abs_path() + "/docs/index.json"  # accessible in ...github.io/my-public-ip-api
 UPDATE_INTERVAL = 10  # seconds in-between checks
 
 
@@ -35,8 +39,9 @@ def update_served(_new):
     # update the file
     dict_to_json(ENDPOINT, _new)
     # deploy
+    os.chdir(abs_path())
     os.system("git pull")
-    os.system("git add docs/index.json")
+    os.system("git add %s" % ENDPOINT)
     os.system('git commit -m "updated IP to %s at %s' % (_new["ipv6"], now()))
     os.system("git push")
 
