@@ -42,7 +42,7 @@ def update_served(_new):
     os.chdir(abs_path())
     os.system("git pull")
     os.system("git add '%s'" % ENDPOINT)
-    os.system('git commit -m "updated IP to %s at %s' % (_new["ipv6"], now()))
+    os.system('git commit -m "updated IP to %s at %s"' % (_new["ipv6"], now()))
     os.system("git push")
 
 
