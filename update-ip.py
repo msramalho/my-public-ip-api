@@ -1,7 +1,7 @@
 import requests, json, time, datetime, os
 
 ENDPOINT = "docs/index.json"  # accessible in ...github.io/my-public-ip-api
-UPDATE_INTERVAL = 1  # seconds in-between checks
+UPDATE_INTERVAL = 10  # seconds in-between checks
 
 
 def json_to_dict(filename):
