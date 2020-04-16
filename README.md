@@ -5,7 +5,7 @@ Use gh-pages as an API for the public IP (typically for dynamic IPs) of your hom
 
 ### Instructions
 1. Fork this repo/ use it as a template
-2. `git clone <YOUR-FORK>` to a machine in the network whose IP you want to have always accessible
+2. `git clone <YOUR-NEW-REPO>` to a machine in the network whose IP you want to have always accessible
 3. Ensure you have python and git
 4. Deploy the script with one of the following (or other parallel alternatives you like): 
    1. `python update-ip.py` to update once
