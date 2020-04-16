@@ -24,4 +24,4 @@ Use gh-pages as an API for the public IP (typically for dynamic IPs) of your hom
 Access servers and services in your home (or wherever) network even though they have dynamic IPs simply by querying your gh-pages endpoint and then use the IP to access them as if you had a static one.
 
 ### Customize
-By default, the script will check if your IP has changed every 10 seconds and update your gh-pages endpoint **only** if it has, if you want to increase this value, simply update the `UPDATE_INTERVAL` in the [update-ip.py](update-ip.py) in your own fork. 
+By default, the script will check if your IP has changed every 10 seconds and update your gh-pages endpoint **only** if it has, if you want to increase this value, simply update the `UPDATE_INTERVAL` in the [update-ip.py](update-ip.py) in your own copy. 
