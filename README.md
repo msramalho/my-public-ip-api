@@ -1,2 +1,25 @@
-# my-public-ip-api
-Use gh-pages as an API for the public IP (typically for dynamic IPs) of your home network
+# My Public IP API
+Use gh-pages as an API for the public IP (typically for dynamic IPs) of your home network.
+
+### Instructions
+1. [Fork this repo]()
+2. `git clone <YOUR-FORK>` to a machine in the network whose IP you want to have always accessible
+3. Ensure you have [python]() and [git]()
+4. Deploy the script with one of the following (or other parallel alternatives you like): 
+   1. `python update-ip.py` to update once
+   2. `nohup python update-ip.py &` this will send the output to `nohup.out`
+   3. `nohup python update-ip.py > logs.txt &` this will send the output to `logs.txt`
+   4. you can also use [bg]() or [tmux]() see [this SO question](https://askubuntu.com/questions/8653/how-to-keep-processes-running-after-ending-ssh-session) for more ways
+5. Enable GH-pages
+   1. Go to your repository settings 
+   2. Scroll to "GitHub Pages"
+   3. Select source: "master branch /docs folder"
+6. (you can have your own custom domain) if not check [https://YOUR-USER-NAME.github.io/my-public-ip-api/](https://YOUR-USER-NAME.github.io/my-public-ip-api/) to see something like `{"ipv4": "<YOUR-IPv4>", "ipv6": "<YOUR-IPv6>"}`
+7. That is now an endpoint with your public IPs
+
+
+### Applications
+Access servers and services at your home address (or wtv) even though they have dynamic IPs simply by querying that endpoint to get your gh-pages endpoint.
+
+### Customize
+By default, the script will check if your IP has changed every second and update your gh-pages endpoint **only** if it has, if you want to increase this value, simply update the `UPDATE_INTERVAL` in the [update-ip.py](update-ip.py) in your own fork. 
