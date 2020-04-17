@@ -27,4 +27,4 @@ Access servers and services in your home (or wherever) network even though they 
 By default, the script will check if your IP has changed every 10 seconds and update your gh-pages endpoint **only** if it has, if you want to increase this value, simply update the `UPDATE_INTERVAL` in the [update-ip.py](update-ip.py) in your own copy. 
 
 ### Privacy
-If you have privacy concerns, you can always make the your copy private and change its name to a long and random sequence of chars
+If you have privacy concerns, you can always make your copy private and change its name to a long and random sequence of chars like `my-public-ip-api-nanananananananananananbatman`
